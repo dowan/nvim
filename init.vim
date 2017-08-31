@@ -23,6 +23,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'dowan/vim-pydocstring'
+Plugin 'tell-k/vim-autopep8'
 
 
 " js
@@ -143,4 +144,4 @@ inoremap "      ""<Left>
 set whichwrap=<,>
 set colorcolumn=80
 
-command WW  w | :%s/\s\+$//e | :call Flake8()
+command WW  w | :%s/\s\+$//e | :call Autopep8() | :call Flake8()
