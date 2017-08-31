@@ -143,3 +143,4 @@ inoremap "      ""<Left>
 set whichwrap=<,>
 set colorcolumn=80
 
+command WW  w | :%s/\s\+$//e | :call Flake8()
