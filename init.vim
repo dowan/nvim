@@ -48,6 +48,7 @@ Plugin 'metakirby5/codi.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " completion
 Plugin 'valloric/youcompleteme'
