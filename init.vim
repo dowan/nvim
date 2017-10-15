@@ -49,6 +49,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Yggdroot/LeaderF'
 
 " completion
 Plugin 'valloric/youcompleteme'
@@ -134,6 +135,8 @@ map <slient> <F4> <Plug>(pydocstring)
 " you complete me
 let g:ycm_autoclose_preview_window_after_completion = 0
 
+" LeaderF
+let g:Lf_ShortcutF = '<C-P>'
 
 "close parenthese etc
 inoremap {      {}<Left>
