@@ -38,7 +38,7 @@ Plugin 'rhysd/vim-crystal'
 Plugin 'fatih/vim-go'
 
 " integration
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'dowan/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/rainbow_parentheses.vim'
 
@@ -83,7 +83,8 @@ set pastetoggle=<F11>
 syntax on
 
 " Use this colorscheme
-colorscheme vitamins
+"colorscheme vitamins
+colorscheme darcula
 
 " Better command-line completion
 set wildmenu
@@ -134,6 +135,7 @@ map <slient> <F4> <Plug>(pydocstring)
 
 " you complete me
 let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_python_binary_path = 'python'
 
 " LeaderF
 let g:Lf_ShortcutF = '<C-P>'
