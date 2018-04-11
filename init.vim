@@ -38,7 +38,7 @@ Plugin 'rhysd/vim-crystal'
 Plugin 'fatih/vim-go'
 
 " integration
-Plugin 'dowan/vim-tmux-navigator'
+""Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/rainbow_parentheses.vim'
 
@@ -151,3 +151,18 @@ set whichwrap=<,>
 set colorcolumn=80
 
 command WW  w | :%s/\s\+$//e | :call Autopep8() | :call Flake8()
+
+" reopen file at the right line
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
+" change clipboard 
+set clipboard=unnamedplus
+
+" navigate in splits
+nnoremap <M-t> <C-W><C-J>
+nnoremap <M-c> <C-W><C-K>
+nnoremap <M-n> <C-W><C-L>
+nnoremap <M-h> <C-W><C-H>
