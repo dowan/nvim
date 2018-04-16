@@ -27,7 +27,8 @@ Plugin 'tell-k/vim-autopep8'
 
 
 " js
-Plugin 'elzr/vim-json'
+Plugin 'posva/vim-vue'
+"Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
@@ -53,6 +54,7 @@ Plugin 'Yggdroot/LeaderF'
 
 " completion
 Plugin 'valloric/youcompleteme'
+Plugin 'tpope/vim-surround'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Finalize Vundle
@@ -144,8 +146,18 @@ inoremap (      ()<Left>
 inoremap '      ''<Left>
 inoremap [      []<Left>
 inoremap "      ""<Left>
+inoremap `      ``<Left>
 
 set whichwrap=<,>
 set colorcolumn=80
 
 command WW  w | :%s/\s\+$//e | :call Autopep8() | :call Flake8()
+
+nnoremap <M-t> <C-W><C-J>
+nnoremap <M-c> <C-W><C-K>
+nnoremap <M-n> <C-W><C-L>
+nnoremap <M-h> <C-W><C-H>
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
