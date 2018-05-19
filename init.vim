@@ -42,6 +42,7 @@ Plugin 'fatih/vim-go'
 ""Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'w0rp/ale'
 
 " interface
 Plugin 'bling/vim-airline'
@@ -51,6 +52,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/LeaderF'
+Plugin 'chriskempson/base16-vim'
 
 " completion
 Plugin 'valloric/youcompleteme'
@@ -86,7 +88,10 @@ syntax on
 
 " Use this colorscheme
 "colorscheme vitamins
-colorscheme darcula
+"colorscheme darcula
+"colorscheme molokai
+"colorscheme inkpot
+colorscheme ThemerVim
 
 " Better command-line completion
 set wildmenu
@@ -105,10 +110,22 @@ set shiftwidth=4
 set mouse=a
 set encoding=utf-8
 set expandtab
+autocmd FileType vue set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType js set tabstop=2|set shiftwidth=2|set expandtab
 
 """""""""""""""""""""""""""""""""""""""""
 " plugin conf
 """""""""""""""""""""""""""""""""""""""""
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "flake 8
 let g:flake8_show_in_gutter=1
