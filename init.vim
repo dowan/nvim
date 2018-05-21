@@ -19,7 +19,6 @@ Plugin 'VundleVim/Vundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " python
-""Plugin 'andviro/flake8-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'dowan/vim-pydocstring'
@@ -28,12 +27,14 @@ Plugin 'tell-k/vim-autopep8'
 
 " js
 Plugin 'posva/vim-vue'
-"Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 " crystal
 Plugin 'rhysd/vim-crystal'
+
+"elm
+Plugin 'ElmCast/elm-vim'
 
 " go
 Plugin 'fatih/vim-go'
@@ -53,6 +54,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/LeaderF'
 Plugin 'chriskempson/base16-vim'
+Plugin 'zirrostig/vim-schlepp'
 
 " completion
 Plugin 'valloric/youcompleteme'
@@ -117,15 +119,11 @@ autocmd FileType js set tabstop=2|set shiftwidth=2|set expandtab
 " plugin conf
 """""""""""""""""""""""""""""""""""""""""
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" w0rp/ale
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open = 1
 
 "flake 8
 let g:flake8_show_in_gutter=1
@@ -150,14 +148,20 @@ map <F2> :NERDTreeToggle<CR>
 " pydocstring
 map <slient> <F4> <Plug>(pydocstring)
 
-" go
-
 " you complete me
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_python_binary_path = 'python'
 
 " LeaderF
 let g:Lf_ShortcutF = '<C-P>'
+
+" vim-schlepp
+vmap <C-C> <nop>
+vmap <M-C> <nop>
+xmap <unique> <C-M-C>  <Plug>SchleppUp 
+xmap <unique> <C-M-T>  <Plug>SchleppDown
+xmap <unique> <C-M-H>  <Plug>SchleppLeft
+xmap <unique> <C-M-N>  <Plug>SchleppRight
 
 "close parenthese etc
 inoremap {      {}<Left>
@@ -166,6 +170,7 @@ inoremap '      ''<Left>
 inoremap [      []<Left>
 inoremap "      ""<Left>
 inoremap `      ``<Left>
+inoremap <      <><Left>
 
 set whichwrap=<,>
 set colorcolumn=80
