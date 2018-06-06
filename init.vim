@@ -30,8 +30,12 @@ Plugin 'posva/vim-vue'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
-" crystal
-Plugin 'rhysd/vim-crystal'
+"elixir
+""Plugin 'elixir-editors/vim-elixir'
+"Plugin 'slashmili/alchemist.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'thinca/vim-ref'
+Plugin 'awetzel/elixir.nvim'
 
 "elm
 Plugin 'ElmCast/elm-vim'
@@ -39,11 +43,14 @@ Plugin 'ElmCast/elm-vim'
 " go
 Plugin 'fatih/vim-go'
 
+" rust
+Plugin 'rust-lang/rust.vim'
+
 " integration
 ""Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'w0rp/ale'
+""Plugin 'w0rp/ale'
 
 " interface
 Plugin 'bling/vim-airline'
@@ -149,7 +156,7 @@ map <F2> :NERDTreeToggle<CR>
 map <slient> <F4> <Plug>(pydocstring)
 
 " you complete me
-let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_python_binary_path = 'python'
 
 " LeaderF
