@@ -32,10 +32,11 @@ Plugin 'mxw/vim-jsx'
 
 "elixir
 ""Plugin 'elixir-editors/vim-elixir'
-"Plugin 'slashmili/alchemist.vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'thinca/vim-ref'
-Plugin 'awetzel/elixir.nvim'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'elixir-editors/vim-elixir'
+""Plugin 'elixir-lang/vim-elixir'
+""Plugin 'thinca/vim-ref'
+""Plugin 'awetzel/elixir.nvim'
 
 "elm
 Plugin 'ElmCast/elm-vim'
@@ -59,7 +60,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'Yggdroot/LeaderF'
+""Plugin 'Yggdroot/LeaderF'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zirrostig/vim-schlepp'
 
