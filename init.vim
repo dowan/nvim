@@ -41,6 +41,9 @@ Plugin 'elixir-editors/vim-elixir'
 "elm
 Plugin 'ElmCast/elm-vim'
 
+"purescript
+Plugin 'raichoo/purescript-vim'
+
 " go
 Plugin 'fatih/vim-go'
 
