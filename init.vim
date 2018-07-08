@@ -54,7 +54,8 @@ Plugin 'kien/rainbow_parentheses.vim'
 ""Plugin 'w0rp/ale'
 
 " interface
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'metakirby5/codi.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
@@ -63,6 +64,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 ""Plugin 'Yggdroot/LeaderF'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zirrostig/vim-schlepp'
+Plugin 'morhetz/gruvbox'
 
 " completion
 Plugin 'valloric/youcompleteme'
@@ -95,13 +97,15 @@ set pastetoggle=<F11>
 """""""""""""""""""""""""""""""""""""""""
 " Turn on syntax coloring
 syntax on
+set background=dark
 
 " Use this colorscheme
 "colorscheme vitamins
 "colorscheme darcula
 "colorscheme molokai
 "colorscheme inkpot
-colorscheme ThemerVim
+"colorscheme ThemerVim
+colorscheme gruvbox
 
 " Better command-line completion
 set wildmenu
@@ -126,6 +130,8 @@ autocmd FileType js set tabstop=2|set shiftwidth=2|set expandtab
 """""""""""""""""""""""""""""""""""""""""
 " plugin conf
 """""""""""""""""""""""""""""""""""""""""
+" vim airline
+"
 
 " w0rp/ale
 let g:ale_set_loclist = 0
@@ -161,7 +167,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_python_binary_path = 'python'
 
 " LeaderF
-let g:Lf_ShortcutF = '<C-P>'
+let g:Lf_ShortcutF = '<C-p>'
 
 " vim-schlepp
 vmap <C-C> <nop>
@@ -198,3 +204,5 @@ nnoremap <M-t> <C-W><C-J>
 nnoremap <M-c> <C-W><C-K>
 nnoremap <M-n> <C-W><C-L>
 nnoremap <M-h> <C-W><C-H>
+
+let g:airline_powerline_fonts=1
