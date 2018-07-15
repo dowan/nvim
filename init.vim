@@ -209,3 +209,4 @@ nnoremap <M-n> <C-W><C-L>
 nnoremap <M-h> <C-W><C-H>
 
 let g:airline_powerline_fonts=1
+tnoremap <Esc> <C-\><C-n>
