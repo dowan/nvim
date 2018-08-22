@@ -210,3 +210,6 @@ nnoremap <M-h> <C-W><C-H>
 
 let g:airline_powerline_fonts=1
 tnoremap <Esc> <C-\><C-n>
+
+" multiple cursor
+let g:multi_cursor_select_all_word_key = '<A-N>'
