@@ -23,6 +23,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'dowan/vim-pydocstring'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'ambv/black'
 
 
 " js
@@ -68,6 +69,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zirrostig/vim-schlepp'
 Plugin 'morhetz/gruvbox'
+Plugin 'gorodinskiy/vim-coloresque'
 
 " completion
 Plugin 'valloric/youcompleteme'
@@ -210,3 +212,10 @@ nnoremap <M-h> <C-W><C-H>
 
 let g:airline_powerline_fonts=1
 tnoremap <Esc> <C-\><C-n>
+
+" multicursor
+let g:multi_cursor_select_all_word_key = '<A-r>'
+
+"black
+let g:black_linelength = 79
+autocmd BufWritePre *.py execute ':Black'
